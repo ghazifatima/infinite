@@ -1,8 +1,8 @@
 ﻿#include <iostream>
 #include <Windows.h>
 using namespace std;
-#define WINDOW_NAME "Call of Duty\xAE" //تعريف نافذة اللعبة
-#define COLT_M1911_CLIP_ADDRESS 0x018ED67C // تعريف العنوان المراد تعديله
+#define WINDOW_NAME "v4.g.sabaya.ae" //تعريف نافذة اللعبة
+#define 7FFC346CAE98_CLIP_ADDRESS 0x018ED67C // تعريف العنوان المراد تعديله
 #define POLL_RATE 100 
 int main(int argc, char** argv)
 {
@@ -63,7 +63,7 @@ int main(int argc, char** argv)
         if (lock_clip) // تعديل قيمة العنوان
         {
             int write_value = 50;
-            WriteProcessMemory(process_handle, (LPVOID)COLT_M1911_CLIP_ADDRESS, &write_value, sizeof(write_value), NULL);
+            WriteProcessMemory(process_handle, (LPVOID)7FFC346CAE98_CLIP_ADDRESS, &write_value, sizeof(write_value), NULL);
         }
     }
 }
